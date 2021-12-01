@@ -1,0 +1,15 @@
+git init https://git-scm.com/docs/git-init
+git status https://git-scm.com/docs/git-status
+git add https://git-scm.com/docs/git-add
+git commit https://git-scm.com/docs/git-commit
+git log https://git-scm.com/docs/git-log
+git branch https://git-scm.com/docs/git-branch
+git checkout https://git-scm.com/docs/git-checkout
+git merge https://git-scm.com/docs/git-merge
+git remote https://git-scm.com/docs/git-remote
+git push https://git-scm.com/docs/git-push
+git clone https://git-scm.com/docs/git-clone
+git pull https://git-scm.com/docs/git-pull
+
+git switch https://git-scm.com/docs/git-switch
+git tag https://git-scm.com/docs/git-tag
