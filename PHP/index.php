@@ -1,13 +1,13 @@
 
+
 //-------------------------------------
 
 <?php
-$nextSecund = 60 * 60 * 24;
-echo $nextSecund;
 
+$result = "Hello";
 
-
-
-
+echo $result[0];
+echo $result[1];
+echo $result[4];
  ?>
 //----------------------------------
