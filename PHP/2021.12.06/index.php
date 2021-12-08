@@ -58,6 +58,7 @@ if (isset($_FILES['photo'])) {
         display: flex;
         align-items: center;
         margin-left: 15px;
+        margin-bottom: 30px;
     }
     .info{
         display: block;
@@ -65,15 +66,20 @@ if (isset($_FILES['photo'])) {
     }
     .margin{
         margin-bottom: 10px;
-        margin-left: 10px;
+        margin-left: 5rem;
     }
     img{
         border-radius: 50%;
         width:200px;
         height:200px;
     }
+    .registration{
+        text-align: center;
+        color: red;
+    }
 </style>
 <body>
+    <h2 class="registration">Registracija patvirtinta !</h2>
     <div class="profile">
     <img src="<?php echo $profilePicture; ?>">
             <div class="ihfo">
@@ -96,10 +102,10 @@ if (isset($_FILES['photo'])) {
             </div>
 
             <div class="margin">
-                <strong>Informacija: </strong><span><?php echo $_POST['textarea']; ?></span>
+                <strong>Papildoma Informacija: </strong><span><?php echo $_POST['textarea']; ?></span>
             </div>
     </div>
     </div>
-                               
+          <hr>                     
 </body>
 </html>
