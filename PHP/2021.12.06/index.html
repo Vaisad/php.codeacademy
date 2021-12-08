@@ -11,20 +11,24 @@
 <body>
     <h3>Registracija i kursus</h3>
     <hr>
-    <form action="index.php" method="post">
+    <form action="index.php" method="post" enctype="multipart/form-data">
         <label for="name">Vardas:</label>
-        <input type="text" id="name" name="FirstName">
+        <input type="text" id="name" name="firstName">
         <br>
         <br>
         <label for="name">Pavarde:</label>
-        <input type="text" id="name" name="LastName">
+        <input type="text" id="name" name="lastName">
+        <br>
+        <br>
+        <label>Ikelti foto: </label>
+        <input type="file" name="photo" id="file">
         <br>
         <br>
         <label for="city">Miestas: </label>
         <select name="city" id="city">
-            <option value="vilnius">Vilnius</option>
-            <option value="kaunas">Kaunas</option>
-            <option value="klaipeda">Klaipėda</option>
+            <option value="Vilnius">Vilnius</option>
+            <option value="Kaunas">Kaunas</option>
+            <option value="Klaipeda">Klaipėda</option>
         </select>
 
         <h3>Programavimo kalba</h3>
@@ -38,7 +42,7 @@
         <label for="python">Python</label>
         <br>
         <h4>Papildoma informacija</h4>
-        <textarea cols="30" rows="5"></textarea>
+        <textarea cols="30" rows="5" name="textarea"></textarea>
         <br>
         <button>Siusti</button>
 
