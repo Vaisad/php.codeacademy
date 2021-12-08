@@ -21,7 +21,6 @@ if (isset($_FILES['photo'])) {
 	if ($file['error'] == UPLOAD_ERR_OK) {
 		$ext = pathinfo($file['name'], PATHINFO_EXTENSION);
 		$ext = strtolower($ext);
-        var_dump($file, $ext, ALLOWED_EXTENSION);
 		if (!in_array($ext, ALLOWED_EXTENSION)) {
 			echo "File not alllowed";
 
@@ -101,8 +100,6 @@ if (isset($_FILES['photo'])) {
             </div>
     </div>
     </div>
-                 
-                     
-
+                               
 </body>
 </html>
