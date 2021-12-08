@@ -70,8 +70,8 @@ if (isset($_FILES['photo'])) {
     }
     img{
         border-radius: 50%;
-        width:200px;
-        height:200px;
+        width: 250px;
+        height: 250px;
     }
     .registration{
         text-align: center;
