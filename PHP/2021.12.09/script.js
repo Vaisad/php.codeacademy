@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const ACTION = formBlock.getAttribute('data-action');
     const METHOD = formBlock.getAttribute('data-method');
 
-    let photo = document.querySelector('#photo');
-    let lang = document.getElementsByName('langs[]');
+    let photo = document.querySelector('#photo');//photo kintamasis
+    let lang = document.getElementsByName('langs[]');//lang kintamasis
 
     document.querySelector('button').addEventListener('click', async function () {
         let elements = document.querySelectorAll('#contact-form [name]');
         const formData = new FormData();
-
+        //if'as
         [...elements].map(element => {
             if (element.name !== 'langs[]') {
                 formData.append(element.name, element.value);

@@ -38,3 +38,11 @@ foreach ($_FILES as $key =>  $file) {
 		move_uploaded_file($file['tmp_name'], $path);
 	}
 }
+$additionalInfo = !empty($_POST['additional_info']) ? $_POST['additional_info'] : null;
+$parameters = [
+    isset($_POST['name']),
+    isset($_POST['surname']),
+    isset($_POST['city'])
+];
+
+!in_array(false, $parameters) ? $header = $footer = true : $header = $footer = false;

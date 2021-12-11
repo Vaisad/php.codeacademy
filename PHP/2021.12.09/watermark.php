@@ -9,29 +9,14 @@ if($ext == 'jpg' || $ext == 'jpeg'){
     $stamp = imagecreatefrompng($path);
 }
 
-
-function resizeImage($image, $w, $h)
-{
-    $oldw = imagesx($image);
-    $oldh = imagesy($image);
-    $temp = imagecreatetruecolor($w, $h);
-
-    imagecopyresampled($temp, $image, 0, 0, 0, 0, $w, $h, $oldw, $oldh);
-
-    return $temp;
-}
-$photoResized = resizeImage($stamp, 467, 618);
-
-
-
 $im = imagecreatefrompng('./assets/images/background.png');
 
 // Set the margins for the stamp and get the height/width of the stamp image
-$marge_right = 903;
-$marge_bottom = 1325;
+$marge_right = 855;
+$marge_bottom = 1420;
 
-$sx = imagesx($photoResized);
-$sy = imagesy($photoResized);
+$sx = imagesx($stamp);
+$sy = imagesy($stamp);
 
 // Copy the stamp image onto our photo using the margin offsets and the photo 
 // width to calculate positioning of the stamp. 
@@ -67,6 +52,7 @@ imagettftext($im,  35, 0, 200, 947, $black, $font_path, $surname);
 imagettftext($im,  35, 0, 200, 1067, $black, $font_path, $city);
 imagettftext($im,  35, 0, 200, 1187, $black, $font_path, $langs);
 imagettftext($im,  35, 0, 200, 1307, $black, $font_path, $content);
+
 
 // Output and free memory
 $generatedName = generateRandomString();
