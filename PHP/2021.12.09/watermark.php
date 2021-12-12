@@ -11,7 +11,6 @@ function resizeImage($image, $w, $h)
 
     return $temp;
 }
-
 // Load the stamp and the photo to apply the watermark to
 $ext = pathinfo($path, PATHINFO_EXTENSION);
 $ext = strtolower($ext);
@@ -22,8 +21,6 @@ if($ext == 'jpg' || $ext == 'jpeg'){
     $stamp = imagecreatefrompng($path);
     $stamp = resizeImage($stamp, 700, 450);
 }
-
-
 $im = imagecreatefrompng('./assets/images/background.png');
 
 // Set the margins for the stamp and get the height/width of the stamp image
@@ -60,14 +57,12 @@ $langs = 'Programavimo kalbos:     ' . $langs;
 $content = !empty($_POST['content']) ? $_POST['content'] : '';
 $content = 'Papildoma informacija:  ' . $content;
 
-
 // Print Text On Image
 imagettftext($im, 35, 0, 200, 827, $black, $font_path, $name);
 imagettftext($im,  35, 0, 200, 947, $black, $font_path, $surname);
 imagettftext($im,  35, 0, 200, 1067, $black, $font_path, $city);
 imagettftext($im,  35, 0, 200, 1187, $black, $font_path, $langs);
 imagettftext($im,  35, 0, 200, 1307, $black, $font_path, $content);
-
 
 // Output and free memory
 $generatedName = generateRandomString();

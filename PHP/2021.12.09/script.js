@@ -47,27 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 document.querySelector("button").addEventListener('click', function () {
-
-    document.getElementById("asd").style.display = "none";
-
-
+    document.getElementById("content1").style.display = "none";
 });
 
-// let someCondition = true;
-// const btn = document.getElementById("toggle");
-// btn.onclick = function () {
-//     if (someCondition == true) {
-//         document.getElementById('contact-form').hidden = false;
-//     }
-// };
-
-const targetDiv = document.getElementById("contact-form");
-const btn = document.getElementById("toggle");
-btn.onclick = function () {
-    if (targetDiv.style.display !== "none") {
-        targetDiv.style.display = "none";
-    } else {
-        targetDiv.style.display = "block";
-    }
-};
-console.log(targetDiv);
