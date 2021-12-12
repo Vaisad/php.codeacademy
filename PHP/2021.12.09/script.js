@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let photo = document.querySelector('#photo');//photo kintamasis
     let lang = document.getElementsByName('langs[]');//lang kintamasis
 
+
+
+
     document.querySelector('button').addEventListener('click', async function () {
         let elements = document.querySelectorAll('#contact-form [name]');
         const formData = new FormData();
@@ -43,3 +46,28 @@ document.addEventListener('DOMContentLoaded', function () {
         photo.src = response;
     });
 });
+document.querySelector("button").addEventListener('click', function () {
+
+    document.getElementById("asd").style.display = "none";
+
+
+});
+
+// let someCondition = true;
+// const btn = document.getElementById("toggle");
+// btn.onclick = function () {
+//     if (someCondition == true) {
+//         document.getElementById('contact-form').hidden = false;
+//     }
+// };
+
+const targetDiv = document.getElementById("contact-form");
+const btn = document.getElementById("toggle");
+btn.onclick = function () {
+    if (targetDiv.style.display !== "none") {
+        targetDiv.style.display = "none";
+    } else {
+        targetDiv.style.display = "block";
+    }
+};
+console.log(targetDiv);
