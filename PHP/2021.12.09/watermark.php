@@ -49,7 +49,7 @@ $city = !empty($_POST['city']) ? $_POST['city'] : '';
 $city = 'Miestas:    ' . $city;
 
 if (isset($_POST['langs'])) {
-    $langs = implode(", ", $_POST['langs']);
+    $langs = implode(" ,  ", $_POST['langs']);
 } else {
     $langs = '';
 }
