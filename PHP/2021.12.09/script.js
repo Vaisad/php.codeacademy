@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let photo = document.querySelector('#photo');//photo kintamasis
     let lang = document.getElementsByName('langs[]');//lang kintamasis
 
-
-
-
     document.querySelector('button').addEventListener('click', async function () {
         let elements = document.querySelectorAll('#contact-form [name]');
         const formData = new FormData();
@@ -33,8 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 formData.append(el.name, el.value);
             }
         });
-
-
 
         let response = await fetch(ACTION, {
             method: METHOD,
